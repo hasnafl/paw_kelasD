@@ -1,0 +1,36 @@
+[
+    {
+        "name": "itbz/fpdf",
+        "version": "1.7.3",
+        "version_normalized": "1.7.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mreg-archive/fpdf.git",
+            "reference": "63340096907ef7525a9002d1ae3d0fd1ff376a6d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mreg-archive/fpdf/zipball/63340096907ef7525a9002d1ae3d0fd1ff376a6d",
+            "reference": "63340096907ef7525a9002d1ae3d0fd1ff376a6d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-05-27T09:02:54+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "fpdf": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "no usage restriction"
+        ],
+        "description": "Unofficial PSR-0 compliant version of the FPDF library",
+        "homepage": "http://www.fpdf.org/",
+        "abandoned": "setasign/fpdf"
+    }
+]
