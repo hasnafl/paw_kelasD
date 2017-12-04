@@ -1,5 +1,5 @@
 {
     "require": {
-        "itbz/fpdf": "^1.7"
+        "itbz/fpdf": "dev-master"
     }
 }
