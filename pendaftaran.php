@@ -227,7 +227,7 @@ include('koneksi_data.php');
                                     </tbody>
                                 </table>
                             </div>
-                            <a class="btn btn-danger" data-toggle="modal" data-target="#tambah"><i class="fa fa-plus"></i>  Tambah</a>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#tambah"><i class="fa fa-plus"></i>  Tambah</a>
                             <!--modal--!>
                             <div id="tambah" class="modal fade" role="dialog">
                                 <div class="modal-dialog">
