@@ -9,6 +9,7 @@ if($_SESSION['akses']!="klinik1"){
     die("Anda bukan bagian dari Hasna Medica I");//jika bukan admin jangan lanjut
 }
 ?>
+<!--dokumen-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
