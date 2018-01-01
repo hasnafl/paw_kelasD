@@ -44,6 +44,11 @@ $content .= '
             <hr>
                 <table border="0" class="table ">
                 <tbody>
+                     <tr>
+                       <td>Tanggal </td>
+                       <td>:</td>
+                       <td>'.$data['tgl_masuk'].'</td>   
+                    </tr>
                     <tr>
                        <td width="150px">ID Pasien</td>
                        <td width="20px">:</td>
@@ -73,6 +78,11 @@ $content .= '
                        <td>Tekanan Darah</td>
                        <td>:</td>
                        <td> '.$data['tekanan_darah'].'</td>  
+                    </tr>
+                    <tr>
+                       <td>Diagnosa</td>
+                       <td>:</td>
+                       <td> '.$data['diagnosa'].'</td>  
                     </tr>
                     <tr>
                        <td>Resep</td>

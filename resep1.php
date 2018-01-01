@@ -202,7 +202,7 @@ include('koneksi_data.php');
 					</ol>
 				</div>
 			</div>
-            <!-- tabel data pasien--!>
+            
           <div id="tab_atas_identitas" class="table-responsive">
             <b>IDENTITAS PASIEN</b>
             <hr>
@@ -251,7 +251,7 @@ include('koneksi_data.php');
                 </tbody>
                 </table>
             </div>
-            <form method="post" enctype="multipart/form-data" action="stok.php">
+            <form method="post" enctype="multipart/form-data" action="aturstok.php">
             <div class="table-responsive">
             <table class="table-bordered">
             <thead>
@@ -276,7 +276,7 @@ include('koneksi_data.php');
             </div>
             
             <td><button class="btn btn-primary btn-sm" name="simpanresep"><i class="fa fa-save">  SIMPAN</i></button></td>
-            <td><a href="resep.php" class="btn btn-primary btn-sm"><i class="fa fa-save">  KEMBALI</i></a></td>
+            <td><a href="resep.php" class="btn btn-primary btn-sm">  KEMBALI</i></a></td>
             </form>
             
             

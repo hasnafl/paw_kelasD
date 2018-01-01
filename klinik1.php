@@ -9,6 +9,9 @@ if($_SESSION['akses']!="klinik1"){
     die("Anda bukan bagian dari Hasna Medica I");//jika bukan admin jangan lanjut
 }
 ?>
+<?php
+include('koneksi_data.php'); 
+?>
 <!--dokumen-->
 <!DOCTYPE html>
 <html lang="en">
@@ -96,9 +99,39 @@ if($_SESSION['akses']!="klinik1"){
   }
   .cycle-pager-active { background-color: #fff; }
 </style>
+<script type="text/javascript">
+  function awal()
+  {
+    a = 0;
+    document.getElementById('tampil_f1').value = a;
+    document.getElementById('tampil_f2').value = a;
+  }
+  
+  function call_f1()
+  {
+    var b = document.getElementById('tampil_f1').value
+    var c = parseInt(b);
+    var d = document.getElementById('tampil_f2').value
+    var e = parseInt(d);
+      var hasil = c + 1;
+      document.getElementById('tampil_f1').value = hasil;
+      c = hasil;
+  }
+  function call_f2()
+  {
+    var b = document.getElementById('tampil_f1').value
+    var c = parseInt(b);
+    var d = document.getElementById('tampil_f2').value
+    var e = parseInt(d);
+      var hasil = e + 1;
+      document.getElementById('tampil_f2').value = hasil;
+      e = hasil;
+    
+  }
+</script>
   </head>
 
-  <body>
+  <body onload="awal()">
   <!-- container section start -->
   <section id="container" class="">
      
@@ -222,17 +255,77 @@ if($_SESSION['akses']!="klinik1"){
 					</ol>
 				</div>
 			</div>
-       <div class="cycle-slideshow">
-  <span class="cycle-prev">&#9001;</span> <!-- Untuk membuat tanda panah di kiri slider -->
-  <span class="cycle-next">&#9002;</span> <!-- Untuk membuat tanda panah di kanan slider -->
-  <span class="cycle-pager"></span>  <!-- Untuk membuat tanda bulat atau link pada slider -->
-  <img src="images2/k1.jpg" alt="Gambar Pertama">
-  <img src="images2/k2.png" alt="Gambar Kedua">
-  <img src="images2/k3.jpg" alt="Gambar Ketiga">
-</div>   
+       <script type="text/javascript">
+    window.setTimeout("waktu()",1000);
+    function waktu() {
+        var tanggal = new Date();
+        setTimeout("waktu()",1000);
+        document.getElementById("jam").innerHTML = tanggal.getHours();
+        document.getElementById("menit").innerHTML = tanggal.getMinutes();
+        document.getElementById("detik").innerHTML = tanggal.getSeconds();
+    }
+</script>
+</head>
+
+<style>
+    #jam-digital{overflow:hidden; width:350px; align-items: center; margin-left: 375px;}
+    #hours{float:left; width:100px; height:100px; background-color:#6B9AB8; margin-right:25px}
+    #minute{float:left; width:100px; height:100px; background-color:#A5B1CB}
+    #second{float:right; width:100px; height:100px; background-color:#FF618A; margin-left:25px}
+    #jam-digital p{color:#FFF; font-size:36px; text-align:center; margin-top:25px}
+</style>
+
+<body onLoad="waktu()">
+    <div id="jam-digital" align="center">
+        <div id="hours"><p id="jam"></p></div>
+        <div id="minute"><p id="menit"></p></div>
+        <div id="second"><p id="detik"></p></div>
+    </div>
+</table>
+
+<div align="center">
+  <div style="width:750px; height:auto; margin-top:40px; margin-left: 200px;">
+      <div style="width:250px; height:auto; float:left">
+        <table align="center">
+          <tr>
+            <td><font size="5" style="margin-left: 15%;">No Antrian</font></td>
+            </tr>
+            <tr>
+          <td><input type="text" id="tampil_f1" disabled="disabled" style="width:180px; height:140px; background:#F00; border:none; color:#FFF; text-align:center; vertical-align:middle; font-size:90px;" />
+</td>    
+            </tr>
+            <tr height="50">
+          <td><button style="margin-left: 30%;" onclick="call_f1()">Panggil</button></td>     
+            </tr>
+            <tr>
+            <td><font size="+2">Antrian Poli Umum</font></td>
+            </tr>
+        </table>
+        </div>
+        <div style="width:250px; height:auto; float:left; margin-left: 100px;">
+        <table align="center">
+          <tr>
+            <td><font size="5" style="margin-left: 15%;">No Antrian</font></td>
+            </tr>
+            <tr>
+            <td><input type="text" id="tampil_f2" disabled="disabled" style="width:180px; height:140px; background:#009; border:none; color:#FFF; text-align:center; vertical-align:middle; font-size:90px;" />
+</td>
+            </tr>
+            <tr height="50">
+          <td><button style="margin-left: 30%;" onclick="call_f2()">Panggil</button></td>    
+            </tr>
+            <tr>
+            <td><font size="+2" style="margin-left: 5px;">Antrian Poli Gigi</font></td>
+            </tr>
+        </table>
+        </div>
+        
+    </div>
+</div>
+
       </section>
-      <!--main content end-->
-  </section>
+      <!--main content end--> 
+  </section> 
   <!-- container section start -->
 
     <!-- javascripts -->

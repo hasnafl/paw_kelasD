@@ -192,6 +192,7 @@ include('koneksi_data.php');
                             				<th>Nama</th>
                             				<th>Umur</th>
                                             <th>Tanggal Masuk</th>
+                                            <th>jam masuk</th>
                                             <th>P/L</th>
                                             <th>Poli</th>
                                             <th>Alamat</th>
@@ -212,6 +213,7 @@ include('koneksi_data.php');
                             				<td><?php echo $data['nama']; ?></td>
                             				<td><?php echo $data['umur']; ?></td>
                                             <td><?php echo $data['tgl_masuk']; ?></td>
+                                            <td><?php echo $data['jam_masuk']; ?></td>
                                             <td><?php echo $data['jenis_kelamin']; ?></td>
                                             <td><?php echo $data['poli']; ?></td>
                                             <td><?php echo $data['alamat']; ?></td>

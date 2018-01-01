@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Antrian Pendaftaran</title>
+<script type="text/javascript">
+	function awal()
+	{
+		a = 0;
+		document.getElementById('tampil_f1').value = a;
+		document.getElementById('tampil_f2').value = a;
+	}
+	
+	function call_f1()
+	{
+		var b = document.getElementById('tampil_f1').value
+		var c = parseInt(b);
+		var d = document.getElementById('tampil_f2').value
+		var e = parseInt(d);
+			var hasil = c + 1;
+			document.getElementById('tampil_f1').value = hasil;
+			c = hasil;
+	}
+	function call_f2()
+	{
+		var b = document.getElementById('tampil_f1').value
+		var c = parseInt(b);
+		var d = document.getElementById('tampil_f2').value
+		var e = parseInt(d);
+			var hasil = e + 1;
+			document.getElementById('tampil_f2').value = hasil;
+			e = hasil;
+		
+	}
+</script>
+</head>
+
+<body onload="awal()">
+<h1 align="center" style="color:#F90">NOMOR ANTRIAN PEDAFTARAN</h1>
+<div align="center">
+	<div style="width:750px; height:auto; margin-top:40px; margin-left: 200px;">
+    	<div style="width:250px; height:auto; float:left">
+        <table align="center">
+        	<tr>
+            <td><font size="5" style="margin-left: 15%;">No Antrian</font></td>
+            </tr>
+            <tr>
+        	<td><input type="text" id="tampil_f1" disabled="disabled" style="width:180px; height:140px; background:#F00; border:none; color:#FFF; text-align:center; vertical-align:middle; font-size:90px;" />
+</td>    
+            </tr>
+            <tr height="50">
+        	<td><button style="margin-left: 30%;" onclick="call_f1()">Panggil</button></td>	    
+            </tr>
+            <tr>
+            <td><font size="+2">Antrian Poli Umum</font></td>
+            </tr>
+        </table>
+        </div>
+        <div style="width:250px; height:auto; float:left; margin-left: 100px;">
+        <table align="center">
+        	<tr>
+            <td><font size="5" style="margin-left: 15%;">No Antrian</font></td>
+            </tr>
+            <tr>
+            <td><input type="text" id="tampil_f2" disabled="disabled" style="width:180px; height:140px; background:#009; border:none; color:#FFF; text-align:center; vertical-align:middle; font-size:90px;" />
+</td>
+            </tr>
+            <tr height="50">
+        	<td><button style="margin-left: 30%;" onclick="call_f2()">Panggil</button></td>    
+            </tr>
+            <tr>
+            <td><font size="+2" style="margin-left: 5px;">Antrian Poli Gigi</font></td>
+            </tr>
+        </table>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
