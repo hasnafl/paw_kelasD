@@ -8,16 +8,16 @@
     </php>
 
     <testsuites>
-        <testsuite name="Login Test Suite">
-            <directory>./test/</directory>
+        <testsuite name="file test suite">
+            <directory>../test/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>./</directory>
+            <directory>../</directory>
             <exclude>
-                <directory>./test</directory>
+                <directory>../test</directory>
             </exclude>
         </whitelist>
     </filter>
