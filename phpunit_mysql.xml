@@ -9,15 +9,17 @@
 
     <testsuites>
         <testsuite name="file test suite">
-            <directory>../file.php</directory>
+            <directory>./test</directory>
+            <file>./file.php</file>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>../file.php</directory>
+            <directory>./</directory>
             <exclude>
-                <directory>../file.php</directory>
+                <directory>./test</directory>
+                <file>./file.php</file>
             </exclude>
         </whitelist>
     </filter>
