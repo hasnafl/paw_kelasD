@@ -8,6 +8,9 @@ php:
   - 5.6.28
   # aliased to a recent hhvm version
   - hhvm
+  
+services:
+  - mysql
 
 # optionally specify a list of environments, for example to test different RDBMS
 env:
@@ -22,7 +25,8 @@ matrix:
     - php: hhvm
     - php: 5.6.28
 
-
+before_install:
+  - mysql -e 'CREATE DATABASE klinik;'
 
 # omitting "script:" will default to phpunit
 # use the $DB env variable to determine the phpunit.xml to use
