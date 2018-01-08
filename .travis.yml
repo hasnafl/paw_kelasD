@@ -8,6 +8,9 @@ php:
   - 5.6.28
   # aliased to a recent hhvm version
   - hhvm
+  
+services:
+  - mysql
 
 # optionally specify a list of environments, for example to test different RDBMS
 env:
@@ -22,13 +25,12 @@ matrix:
     - php: hhvm
     - php: 5.6.28
 
-# execute any number of scripts before the test run, custom env's are available as variables
-before_script:
-  - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS klinik1;" -uroot; fi
+before_install:
+  - mysql -e 'CREATE DATABASE klinik;'
 
 # omitting "script:" will default to phpunit
 # use the $DB env variable to determine the phpunit.xml to use
-script: phpunit --configuration phpunit_$DB.xml --coverage-text
+script: phpunit --configuration phpunit_mysql.xml --coverage-text
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
