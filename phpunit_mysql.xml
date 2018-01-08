@@ -9,22 +9,19 @@
 
     <testsuites>
         <testsuite name="file test suite">
-            <directory>./test</directory>
-            <file>./test/filetest.php</file>
+            <directory>test</directory>
+            <file>test/filetest.php</file>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>./</directory>
+            <directory>test</directory>
             <exclude>
-                <directory>./test</directory>
-                <file>./test/filetest.php</file>
+                <directory>test</directory>
+                <file>test/filetest.php</file>
             </exclude>
         </whitelist>
     </filter>
-<<<<<<< HEAD
 </phpunit>
-=======
-</phpunit>
->>>>>>> a2458797babb93460d5d852b888b90d7376606fb
+
