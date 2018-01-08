@@ -5,8 +5,7 @@ language: php
 php:
   # using major version aliases
 
-  - 5.6
-  - 5.7
+  - 5.6.28
   # aliased to a recent hhvm version
   - hhvm
   
@@ -24,8 +23,7 @@ matrix:
       env: DB=mysql  # PDO driver for pgsql is unsupported by HHVM (3rd party install for support)
   allow_failures:
     - php: hhvm
-    - php: 5.6
-    - php: 5.7
+    - php: 5.6.28
 
 before_install:
   - mysql -e 'CREATE DATABASE klinik;'
