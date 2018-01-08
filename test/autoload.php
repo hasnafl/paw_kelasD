@@ -6,4 +6,3 @@ function loader($class)
         require $file;
     }
 }
-spl_autoload_register('loader');

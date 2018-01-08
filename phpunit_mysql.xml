@@ -21,4 +21,8 @@
             </exclude>
         </whitelist>
     </filter>
+<<<<<<< HEAD
 </phpunit>
+=======
+</phpunit>
+>>>>>>> a2458797babb93460d5d852b888b90d7376606fb
