@@ -10,7 +10,7 @@
     <testsuites>
         <testsuite name="file test suite">
             <directory>test</directory>
-            <file>test/TestClass.php</file>
+            <file>test/filetest.php</file>
         </testsuite>
     </testsuites>
 
@@ -19,7 +19,7 @@
             <directory>test</directory>
             <exclude>
                 <directory>test</directory>
-                <file>test/TestClass.php</file>
+                <file>test/filetest.php</file>
             </exclude>
         </whitelist>
     </filter>
